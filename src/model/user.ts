@@ -1,11 +1,11 @@
 import mongoose, {Schema, Document} from 'mongoose';
 
-export interface Messaege extends Document{
+export interface Message extends Document{
       content: string;
       createdAt: Date;
 }
 
-const MessageSchema: Schema<Messaege> = new Schema({
+const MessageSchema: Schema<Message> = new Schema({
       content:{
             type: String,
             required: true, 
@@ -26,7 +26,7 @@ export interface User extends Document{
       verifyCodeExpire: Date;
       isverified: boolean;
       isAcceptingMessage: boolean;
-      messages: Messaege[];
+      messages: Message[];
 }
 
 
